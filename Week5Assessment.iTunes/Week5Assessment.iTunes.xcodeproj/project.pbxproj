@@ -12,6 +12,10 @@
 		23B9967329B28AC900FC1EEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B9967129B28AC900FC1EEE /* Main.storyboard */; };
 		23B9967529B28ACA00FC1EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B9967429B28ACA00FC1EEE /* Assets.xcassets */; };
 		23B9967829B28ACA00FC1EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B9967629B28ACA00FC1EEE /* LaunchScreen.storyboard */; };
+		23B9968229B2941200FC1EEE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9968129B2941200FC1EEE /* NetworkError.swift */; };
+		23B9968429B2955B00FC1EEE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9968329B2955B00FC1EEE /* Constants.swift */; };
+		23B9968729B2995400FC1EEE /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9968629B2995400FC1EEE /* Artist.swift */; };
+		23B9968929B29B7C00FC1EEE /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9968829B29B7C00FC1EEE /* Song.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		23B9967429B28ACA00FC1EEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23B9967729B28ACA00FC1EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23B9967929B28ACA00FC1EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23B9968129B2941200FC1EEE /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		23B9968329B2955B00FC1EEE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		23B9968629B2995400FC1EEE /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		23B9968829B29B7C00FC1EEE /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 		23B9966A29B28AC900FC1EEE /* Week5Assessment.iTunes */ = {
 			isa = PBXGroup;
 			children = (
+				23B9968529B2993D00FC1EEE /* Models */,
 				23B9967F29B28AF000FC1EEE /* SupportingFiles */,
 				23B9967129B28AC900FC1EEE /* Main.storyboard */,
 				23B9967629B28ACA00FC1EEE /* LaunchScreen.storyboard */,
@@ -64,12 +73,31 @@
 		23B9967F29B28AF000FC1EEE /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				23B9968029B2940100FC1EEE /* Helper&Extensions */,
 				23B9966B29B28AC900FC1EEE /* AppDelegate.swift */,
 				23B9966D29B28AC900FC1EEE /* SceneDelegate.swift */,
 				23B9967429B28ACA00FC1EEE /* Assets.xcassets */,
 				23B9967929B28ACA00FC1EEE /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		23B9968029B2940100FC1EEE /* Helper&Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				23B9968129B2941200FC1EEE /* NetworkError.swift */,
+				23B9968329B2955B00FC1EEE /* Constants.swift */,
+			);
+			path = "Helper&Extensions";
+			sourceTree = "<group>";
+		};
+		23B9968529B2993D00FC1EEE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23B9968629B2995400FC1EEE /* Artist.swift */,
+				23B9968829B29B7C00FC1EEE /* Song.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B9968929B29B7C00FC1EEE /* Song.swift in Sources */,
+				23B9968229B2941200FC1EEE /* NetworkError.swift in Sources */,
 				23B9966C29B28AC900FC1EEE /* AppDelegate.swift in Sources */,
 				23B9966E29B28AC900FC1EEE /* SceneDelegate.swift in Sources */,
+				23B9968729B2995400FC1EEE /* Artist.swift in Sources */,
+				23B9968429B2955B00FC1EEE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
