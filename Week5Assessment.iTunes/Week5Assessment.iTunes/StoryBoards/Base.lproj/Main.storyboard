@@ -4,14 +4,15 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Artist Discog Table View Controller-->
         <scene sceneID="ENA-Vl-OwG">
             <objects>
-                <tableViewController id="2IQ-kL-ZSe" sceneMemberID="viewController">
+                <tableViewController id="2IQ-kL-ZSe" customClass="ArtistDiscogTableViewController" customModule="Week5Assessment_iTunes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="c3Q-zx-cH4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +26,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="125" id="RlZ-UE-hKh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="125" id="RlZ-UE-hKh" customClass="albumCell">
                                 <rect key="frame" x="0.0" y="94" width="393" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RlZ-UE-hKh" id="sBi-tb-IXW">
@@ -81,6 +82,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="iS9-gK-48m"/>
+                    <connections>
+                        <outlet property="albumImageView" destination="YvU-8p-Aie" id="Fne-7B-maf"/>
+                        <outlet property="albumTitleLabel" destination="Dft-jc-nA0" id="VsY-e4-DdQ"/>
+                        <outlet property="artistSearchBar" destination="ENG-Aw-KiJ" id="53b-Wu-WOg"/>
+                        <outlet property="numberOfSongsLabel" destination="exC-IF-Ysf" id="obx-SM-NQP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9F-6i-Hpq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="4Mo-3V-Aqh">
@@ -135,11 +142,36 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gNO-2s-b3L">
-                                        <rect key="frame" x="0.0" y="50" width="377" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="377" height="27.666666030883789"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gNO-2s-b3L" id="3D6-QU-2cX">
-                                            <rect key="frame" x="0.0" y="0.0" width="377" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="377" height="27.666666030883789"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="059-K9-lXD">
+                                                    <rect key="frame" x="4" y="4" width="369" height="19.666666666666668"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Track Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwh-s4-IFB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="278" height="19.666666666666668"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="900" verticalHuggingPriority="251" text="(Track Length)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMW-yd-8No">
+                                                            <rect key="frame" x="286" y="0.0" width="83" height="19.666666666666668"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="059-K9-lXD" firstAttribute="leading" secondItem="3D6-QU-2cX" secondAttribute="leading" constant="4" id="0gk-sz-hcO"/>
+                                                <constraint firstItem="059-K9-lXD" firstAttribute="top" secondItem="3D6-QU-2cX" secondAttribute="top" constant="4" id="CZc-YS-MJL"/>
+                                                <constraint firstAttribute="trailing" secondItem="059-K9-lXD" secondAttribute="trailing" constant="4" id="hkk-ze-aNQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="059-K9-lXD" secondAttribute="bottom" constant="4" id="sFP-WJ-plO"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>

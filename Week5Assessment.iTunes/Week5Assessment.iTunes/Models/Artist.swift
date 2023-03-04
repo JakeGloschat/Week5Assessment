@@ -28,3 +28,5 @@ struct AlbumResult: Decodable {
     let imageURL: String
     let collectionId: Int
 }
+
+

@@ -9,7 +9,7 @@ import Foundation
 
 enum NetworkError: LocalizedError {
     
-    case InvalidUR
+    case InvalidURL
     case thrownError(Error)
     case noData
     case unableToDecode
@@ -18,7 +18,7 @@ enum NetworkError: LocalizedError {
     
     var errorDescription: String? {
         switch self {
-        case .InvalidUR:
+        case .InvalidURL:
             return "Invalid URL. Check your endpoint."
         case .thrownError(let error):
             return "Thrown error. Error was \(error.localizedDescription)"
