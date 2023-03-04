@@ -24,4 +24,8 @@ struct Constants {
         static let idQueryKey = "id"
        // static let idQueryValue = "\(AlbumResult.collectionID)"
     }
+    
+    struct Error {
+        static let unkownError = "Unkown Error At This Time."
+    }
 }

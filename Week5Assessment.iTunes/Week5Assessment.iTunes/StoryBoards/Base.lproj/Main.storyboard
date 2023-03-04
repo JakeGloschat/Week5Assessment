@@ -26,7 +26,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="125" id="RlZ-UE-hKh" customClass="albumCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="albumCell" rowHeight="125" id="RlZ-UE-hKh" customClass="AlbumTableViewCell" customModule="Week5Assessment_iTunes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="94" width="393" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RlZ-UE-hKh" id="sBi-tb-IXW">
@@ -72,7 +72,10 @@
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="4Mo-3V-Aqh" appends="YES" id="Ypc-31-NiU"/>
+                                    <outlet property="albumImageView" destination="YvU-8p-Aie" id="orD-Iy-s9T"/>
+                                    <outlet property="albumTitleLabel" destination="Dft-jc-nA0" id="tKV-FS-OWf"/>
+                                    <outlet property="numberOfSongsLabel" destination="exC-IF-Ysf" id="u7w-74-WYm"/>
+                                    <segue destination="waR-1M-RcZ" kind="show" id="cmE-vR-wLW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -83,18 +86,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="iS9-gK-48m"/>
                     <connections>
-                        <outlet property="albumImageView" destination="YvU-8p-Aie" id="Fne-7B-maf"/>
-                        <outlet property="albumTitleLabel" destination="Dft-jc-nA0" id="VsY-e4-DdQ"/>
-                        <outlet property="artistSearchBar" destination="ENG-Aw-KiJ" id="53b-Wu-WOg"/>
-                        <outlet property="numberOfSongsLabel" destination="exC-IF-Ysf" id="obx-SM-NQP"/>
+                        <outlet property="artistSearchBar" destination="ENG-Aw-KiJ" id="2Jp-yM-sJs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9F-6i-Hpq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="4Mo-3V-Aqh">
-                    <connections>
-                        <segue destination="waR-1M-RcZ" kind="show" id="q2z-18-foV"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="552" y="-63"/>
         </scene>
