@@ -29,8 +29,9 @@ class ArtistDiscogTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as? AlbumTableViewCell else { return UITableViewCell() }
-        guard let albums = albums?[indexPath.row] else { return UITableViewCell() }
-        cell.updateViews(album: albums)
+        guard let album = albums?[indexPath.row] else { return UITableViewCell() }
+        cell.album = album
+        cell.updateViews()
         return cell
     }
     

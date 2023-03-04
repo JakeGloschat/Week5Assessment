@@ -45,14 +45,14 @@ struct NetworkController {
         }.resume()
     }
     
-    static func fetchAlbumDetails(forCollectionId collectionId: AlbumResult , completion: @escaping (Result<[SongResult], NetworkError>) -> Void) {
+    static func fetchAlbumDetails(forCollectionId album: AlbumResult , completion: @escaping (Result<[SongResult], NetworkError>) -> Void) {
         guard let baseURL = URL(string: Constants.ArtistDiscogURL.artistAlbumBaseURL) else { completion(.failure(.InvalidURL)) ; return }
         
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         urlComponents?.path.append(Constants.ArtistDiscogURL.lookUpSongPath)
         
         let songSearchQuery = URLQueryItem(name: Constants.APIQueryKey.songQueryKey, value: Constants.APIQueryKey.songQueryValue)
-        let songIdQuery = URLQueryItem(name: Constants.APIQueryKey.idQueryKey, value: "\(collectionId.collectionId)")
+        let songIdQuery = URLQueryItem(name: Constants.APIQueryKey.idQueryKey, value: "\(album.collectionId)")
         
         urlComponents?.queryItems = [songSearchQuery, songIdQuery]
         
@@ -81,9 +81,8 @@ struct NetworkController {
         }.resume()
     }
     
-    static func fetchImage(for item: String?, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
+    static func fetchImage(for item: String, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
         
-        guard let item = item else { completion(.success(UIImage(named: "Last_Buca_Ref")!)) ; return }
         guard let finalURL = URL(string: item) else { completion(.failure(.InvalidURL)) ; return }
         print("Image Fetch Final URL: \(finalURL)")
         

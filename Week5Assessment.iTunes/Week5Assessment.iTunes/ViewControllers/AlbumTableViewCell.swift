@@ -18,15 +18,16 @@ class AlbumTableViewCell: UITableViewCell {
  // MARK: - Properties
     var album: AlbumResult?
     
-    func updateViews(album: AlbumResult) {
-        let album = album
+    func updateViews() {
+        guard let album = album else { return }
         albumTitleLabel.text = album.albumTitle
         numberOfSongsLabel.text = "Track Count: \(album.trackCount)"
         fetchAlbumImage()
     }
     
     func fetchAlbumImage() {
-        NetworkController.fetchImage(for: album?.imageURL) { [weak self] result in
+        guard let album = album else { return }
+        NetworkController.fetchImage(for: album.imageURL) { [weak self] result in
             switch result {
             case .success(let image):
                 DispatchQueue.main.async { self?.albumImageView.image = image }

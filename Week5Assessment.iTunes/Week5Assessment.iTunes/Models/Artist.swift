@@ -8,6 +8,10 @@
 import Foundation
 
 struct ArtistTopLevelDictionary: Decodable {
+    private enum CodingKeys: String, CodingKey {
+        case albumResults = "results"
+    }
+    
     let albumResults: [AlbumResult]
 }
 
