@@ -19,7 +19,7 @@ class ArtistDiscogTableViewController: UITableViewController {
     
     // MARK: - Properties
     var albums: [AlbumResult]? = []
-    
+    var singleAlbum: SongTopLevelDictionary?
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,7 +38,12 @@ class ArtistDiscogTableViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "albumDetailsVC" {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                  let destinationVC = segue.destination as? AlbumDetailViewController else { return }
+            let album = albums?[indexPath.row]
+            destinationVC.album = album
+        }
     }
 }
 

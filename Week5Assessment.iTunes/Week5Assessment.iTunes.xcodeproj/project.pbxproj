@@ -19,6 +19,8 @@
 		23B9968E29B2B66900FC1EEE /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9968D29B2B66900FC1EEE /* NetworkController.swift */; };
 		23B9969129B2CDAE00FC1EEE /* ArtistDiscogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9969029B2CDAE00FC1EEE /* ArtistDiscogTableViewController.swift */; };
 		23B9969529B2F25D00FC1EEE /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9969429B2F25D00FC1EEE /* AlbumTableViewCell.swift */; };
+		23B9969929B40B4200FC1EEE /* AlbumDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9969829B40B4200FC1EEE /* AlbumDetailTableViewCell.swift */; };
+		23B9969B29B40B8200FC1EEE /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9969A29B40B8200FC1EEE /* AlbumDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		23B9968D29B2B66900FC1EEE /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		23B9969029B2CDAE00FC1EEE /* ArtistDiscogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDiscogTableViewController.swift; sourceTree = "<group>"; };
 		23B9969429B2F25D00FC1EEE /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		23B9969829B40B4200FC1EEE /* AlbumDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewCell.swift; sourceTree = "<group>"; };
+		23B9969A29B40B8200FC1EEE /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 			children = (
 				23B9969029B2CDAE00FC1EEE /* ArtistDiscogTableViewController.swift */,
 				23B9969429B2F25D00FC1EEE /* AlbumTableViewCell.swift */,
+				23B9969A29B40B8200FC1EEE /* AlbumDetailViewController.swift */,
+				23B9969829B40B4200FC1EEE /* AlbumDetailTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -204,8 +210,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B9969929B40B4200FC1EEE /* AlbumDetailTableViewCell.swift in Sources */,
 				23B9968929B29B7C00FC1EEE /* Song.swift in Sources */,
 				23B9968229B2941200FC1EEE /* NetworkError.swift in Sources */,
+				23B9969B29B40B8200FC1EEE /* AlbumDetailViewController.swift in Sources */,
 				23B9966C29B28AC900FC1EEE /* AppDelegate.swift in Sources */,
 				23B9966E29B28AC900FC1EEE /* SceneDelegate.swift in Sources */,
 				23B9968729B2995400FC1EEE /* Artist.swift in Sources */,
