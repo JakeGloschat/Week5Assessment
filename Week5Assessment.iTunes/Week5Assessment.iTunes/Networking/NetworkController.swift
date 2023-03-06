@@ -45,7 +45,7 @@ struct NetworkController {
         }.resume()
     }
     
-    static func fetchAlbumDetails(forCollectionId album: SingleAlbum , completion: @escaping (Result<[SongResult], NetworkError>) -> Void) {
+    static func fetchAlbumDetails(forCollectionId album: AlbumResult, completion: @escaping (Result<[Song], NetworkError>) -> Void) {
         guard let baseURL = URL(string: Constants.ArtistDiscogURL.artistAlbumBaseURL) else { completion(.failure(.InvalidURL)) ; return }
         
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
@@ -73,7 +73,7 @@ struct NetworkController {
             
             do {
                 let topLevel = try JSONDecoder().decode(SongTopLevelDictionary.self, from: data)
-                completion(.success(topLevel.songResult))
+                completion(.success(topLevel.results))
             } catch {
                 completion(.failure(.unableToDecode))
                 return
@@ -100,5 +100,4 @@ struct NetworkController {
             completion(.success(image))
         }.resume()
     }
-    
 } // End of Struct

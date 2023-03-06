@@ -7,144 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0B57FF26-376D-43E8-AE35-78A457C51CE8"
+            uuid = "DCCFCACD-D9CD-42AB-B385-901E7A666C1F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Week5Assessment.iTunes/Networking/NetworkController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "fetchImage(for:completion:)"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "fetchAlbumDetails(forCollectionId:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CDF0CCE3-A281-466B-8CCC-7196ADC8AFE6"
+            uuid = "14AFF572-1766-44E6-8FB4-6AE1A78EED68"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Week5Assessment.iTunes/Networking/NetworkController.swift"
+            filePath = "Week5Assessment.iTunes/ViewControllers/AlbumDetailTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "fetchImage(for:completion:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "updateViews()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "89820984-F825-45F1-B4FA-5E01A330EE72"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Week5Assessment.iTunes/ViewControllers/AlbumTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "fetchAlbumImage()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "89820984-F825-45F1-B4FA-5E01A330EE72 - 1e2f7669f26ca584"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Week5Assessment_iTunes.AlbumTableViewCell.fetchAlbumImage() -&gt; ()"
-                  moduleName = "Week5Assessment.iTunes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/handz/Developer/Stateful/Unit%205/Week5Assessment/Week5Assessment/Week5Assessment.iTunes/Week5Assessment.iTunes/ViewControllers/AlbumTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "89820984-F825-45F1-B4FA-5E01A330EE72 - 3f281d38a25f810a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;__C.UIImage, Week5Assessment_iTunes.NetworkError&gt;) -&gt; () in Week5Assessment_iTunes.AlbumTableViewCell.fetchAlbumImage() -&gt; ()"
-                  moduleName = "Week5Assessment.iTunes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/handz/Developer/Stateful/Unit%205/Week5Assessment/Week5Assessment/Week5Assessment.iTunes/Week5Assessment.iTunes/ViewControllers/AlbumTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "208">
-               </Location>
-               <Location
-                  uuid = "89820984-F825-45F1-B4FA-5E01A330EE72 - cbb49de3335dedc8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;__C.UIImage, Week5Assessment_iTunes.NetworkError&gt;) -&gt; () in Week5Assessment_iTunes.AlbumTableViewCell.fetchAlbumImage() -&gt; ()"
-                  moduleName = "Week5Assessment.iTunes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/handz/Developer/Stateful/Unit%205/Week5Assessment/Week5Assessment/Week5Assessment.iTunes/Week5Assessment.iTunes/ViewControllers/AlbumTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "64">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "41394D8B-42A9-4036-9C31-6A031F47CA5A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Week5Assessment.iTunes/ViewControllers/AlbumTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "fetchAlbumImage()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "41394D8B-42A9-4036-9C31-6A031F47CA5A - 1e2f7669f26ca5e5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Week5Assessment_iTunes.AlbumTableViewCell.fetchAlbumImage() -&gt; ()"
-                  moduleName = "Week5Assessment.iTunes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/handz/Developer/Stateful/Unit%205/Week5Assessment/Week5Assessment/Week5Assessment.iTunes/Week5Assessment.iTunes/ViewControllers/AlbumTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "41394D8B-42A9-4036-9C31-6A031F47CA5A - 1e2f7669f26ca5e5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Week5Assessment_iTunes.AlbumTableViewCell.fetchAlbumImage() -&gt; ()"
-                  moduleName = "Week5Assessment.iTunes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/handz/Developer/Stateful/Unit%205/Week5Assessment/Week5Assessment/Week5Assessment.iTunes/Week5Assessment.iTunes/ViewControllers/AlbumTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "112">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

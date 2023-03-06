@@ -8,11 +8,10 @@
 import UIKit
 
 class AlbumDetailViewController: UIViewController {
-
+    
     // MARK: - Outlets
     @IBOutlet weak var albumImageView: UIImageView!
     @IBOutlet weak var albumNameLabel: UILabel!
-    @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var albumPriceLabel: UILabel!
     @IBOutlet weak var songDetailTableView: UITableView!
     
@@ -21,24 +20,39 @@ class AlbumDetailViewController: UIViewController {
         super.viewDidLoad()
         songDetailTableView.dataSource = self
         songDetailTableView.delegate = self
+        fetchAlbumDetails()
         updateUI()
     }
     
     // MARK: - Properties
-    var songs: [SongResult]? = []
-    var singleAlbum: SingleAlbum?
+    var songs: [Song]? = []
     var album: AlbumResult?
+    
     // MARK: - Functions
-
+    
+    func fetchAlbumDetails() {
+        guard let album = album else { return }
+        NetworkController.fetchAlbumDetails(forCollectionId: album ) { songs in
+            switch songs {
+            case .success(let songs):
+                self.songs = songs
+                DispatchQueue.main.async {
+                    self.songDetailTableView.reloadData()
+                }
+            case .failure(let error):
+                print(error.errorDescription ?? Constants.Error.unkownError)
+            }
+        }
+    }
+    
     func updateUI() {
         guard let album = album else { return }
         albumNameLabel.text = album.albumTitle
-        releaseDateLabel.text = album.releaseDate
         albumPriceLabel.text = "$\(album.albumPrice)"
-        songDetailTableView.reloadData()
         fetchAlbumImage()
+        songDetailTableView.reloadData()
     }
-    
+
     func fetchAlbumImage () {
         guard let album = album else { return }
         NetworkController.fetchImage(for: album.imageURL) { [weak self] result in
@@ -54,8 +68,7 @@ class AlbumDetailViewController: UIViewController {
 
 extension AlbumDetailViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let songs = songs else { return 0 }
-        return songs.count
+        return songs?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

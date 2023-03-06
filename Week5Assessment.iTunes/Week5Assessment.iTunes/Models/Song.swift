@@ -8,39 +8,17 @@
 import Foundation
 
 struct SongTopLevelDictionary: Decodable {
-    private enum CodingKeys: String, CodingKey {
-        case songResult = "results"
-        case singleAlbum
-    }
-    
-    let singleAlbum: SingleAlbum
-    let songResult: [SongResult]
+    let results: [Song]
 }
 
-struct SingleAlbum: Decodable {
-    private enum CondingKeys: String, CodingKey {
-        case albumTitle = "collectionName"
-        case trackCount
-        case albumPrice = "collectionPrice"
-        case releaseDate
-        case imageURL = "artworkUrl100"
-        case collectionId
-    }
-    
-    let albumTitle: String
-    let trackCount: Int
-    let albumPrice: Double
-    let releaseDate: String
-    let imageURL: String
-    let collectionId: Int
-}
-
-struct SongResult: Decodable {
+struct Song: Decodable {
     private enum CodingKeys: String, CodingKey {
         case trackName
         case trackTime = "trackTimeMillis"
     }
     
-    let trackName: String
-    let trackTime: Int
+    let trackName: String?
+    let trackTime: Int?
+
 }
+
