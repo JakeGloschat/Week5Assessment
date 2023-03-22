@@ -53,7 +53,7 @@ class AlbumDetailViewController: UIViewController {
         songDetailTableView.reloadData()
     }
 
-    func fetchAlbumImage () {
+    func fetchAlbumImage() {
         guard let album = album else { return }
         NetworkController.fetchImage(for: album.imageURL) { [weak self] result in
             switch result {
