@@ -16,7 +16,7 @@ class AlbumDetailTableViewCell: UITableViewCell {
     var song: Song?
     
     func conversion(song: Song) -> String {
-        guard let totalTrackTime = song.trackTime else { return ""}
+        guard let totalTrackTime = song.trackTime else { return "empty cell"}
         let totalSeconds = totalTrackTime/1000
         let minutes = totalSeconds / 60
         let seconds = totalSeconds % 60
@@ -24,6 +24,7 @@ class AlbumDetailTableViewCell: UITableViewCell {
             let secondString = "0\(seconds)"
             return "\(minutes):\(secondString)"
         }
+        
         return("\(minutes):\(seconds)")
     }
     

@@ -73,7 +73,8 @@ struct NetworkController {
             
             do {
                 let topLevel = try JSONDecoder().decode(SongTopLevelDictionary.self, from: data)
-                completion(.success(topLevel.results))
+                let trackArray = topLevel.results.filter { $0.wrapperType == "track" }
+                completion(.success(trackArray))
             } catch {
                 completion(.failure(.unableToDecode))
                 return

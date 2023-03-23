@@ -15,10 +15,12 @@ struct Song: Decodable {
     private enum CodingKeys: String, CodingKey {
         case trackName
         case trackTime = "trackTimeMillis"
+        case wrapperType
     }
     
     let trackName: String?
     let trackTime: Int?
+    let wrapperType: String
 
 }
 

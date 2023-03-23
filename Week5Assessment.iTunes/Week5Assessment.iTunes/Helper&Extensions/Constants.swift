@@ -22,7 +22,6 @@ struct Constants {
         static let songQueryKey = "entity"
         static let songQueryValue = "song"
         static let idQueryKey = "id"
-       // static let idQueryValue = "\(AlbumResult.collectionID)"
     }
     
     struct Error {
